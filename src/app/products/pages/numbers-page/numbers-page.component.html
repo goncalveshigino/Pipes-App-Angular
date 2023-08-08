@@ -1,1 +1,28 @@
-<p>numbers-page works!</p>
+<p-panel header="Pipes numericos" class="p-1">
+  <p>
+    Pipes incluidos em Angolar - Usualmente em um Common Modole
+  </p>
+
+</p-panel>
+
+<div class="grid mt-2">
+
+  <div class="col-12 md:col-4">
+    <p-card header="vendas líquidas" subheader="Do Presente Ano">
+     {{ (totalSells + 1235) | number:'1.2-2' }}
+    </p-card>
+ </div>
+
+  <div class="col-12 md:col-4">
+     <p-card header="vendas brutas" subheader="Do Presente Ano">
+      {{ totalSells | currency:'AOA': 'symbol-narrow':'1.4-4' }}
+     </p-card>
+  </div>
+
+  <div class="col-12 md:col-4">
+    <p-card header="Ganacias percentual" subheader="Do Presente Ano">
+     {{ percent | percent: '1.2-2' }}
+    </p-card>
+ </div>
+
+</div>
